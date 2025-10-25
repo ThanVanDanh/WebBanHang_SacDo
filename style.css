@@ -178,13 +178,14 @@ header nav ul.menu > li > ul > li > a:hover {
     padding-bottom: 5px;
 }
 #section_slider {
-    height: calc(100vh - 80px);
+    /*height: calc(100vh - 80px);*/
+    margin-bottom: 50px;
 }
 #section_slider .container {
     max-width: 100%;
     padding: 0;
     margin: 0;
-    height: 100%;
+    /*height: 100%;*/
 }
 #section_slider img{
     width: 100%;
@@ -256,4 +257,42 @@ header nav ul.menu > li > ul > li > a:hover {
 }
 .demo-height{
     height: 100vh;
+}
+.section-product-signature{
+    margin-bottom: 30px;
+
+}
+.section-product-signature .container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section-product-signature .container .heading-bar-title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #000;
+}
+.section-product-signature .container .tab-title{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid transparent;
+    gap: 40px;
+}
+.section-product-signature .container .tab-link{
+    cursor: pointer;
+    padding-bottom: 8px;
+    font-size: 18px;
+    color: #888888;
+    transition: color 0.3s ease;
+    position: relative;
+}
+section.section-product-signature .container .tab-link:hover{
+    color:black;
 }

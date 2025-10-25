@@ -74,7 +74,7 @@ header nav ul.menu > li {
     margin-top: 20px;
 }
 header nav ul.menu > li > a,
-.icons a {
+.icons > a {
     color: rgb(202, 183, 161);
     text-decoration: none;
     font-weight: 200;
@@ -88,9 +88,8 @@ header nav ul.menu > li > a,
 header nav ul.menu > li > a i {
     padding-left: 5px;
 }
-
 header nav ul.menu > li > a::after,
-.icons a::after {
+.icons > a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -102,7 +101,7 @@ header nav ul.menu > li > a::after,
     transition: width 0.2s ease;
 }
 header nav ul.menu > li > a:hover::after,
-.icons a:hover::after {
+.icons > a:hover::after {
     width: 100%;
 }
 
@@ -145,37 +144,76 @@ header nav ul.menu > li > ul > li > a::after {
 header nav ul.menu > li > ul > li > a:hover {
     color: #ffffff;
 }
-.header .icons {
+.header .icons{
     margin-left: 25px;
     margin-top: 20px;
     display: flex;
     gap: 30px;
+    align-items: center;
 }
-.hero {
-    text-align: center;
-    padding: 3rem 0;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-    color: var(--color-secondary);
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-.content {
-    padding: 2rem 0;
-}
-
-.content h2 {
-    font-size: 2rem;
-    color: var(--color-primary);
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--color-primary);
+.icons .user-menu > a {
+    color: rgb(202, 183, 161);
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
     padding-bottom: 5px;
+    display: block;
+}
+header nav ul.menu > li > a::after,
+.icons > a::after,
+.icons .user-menu > a::after { /* Thêm selector này */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-40%);
+    width: 0;
+    height: 2px;
+    background-color: #aa9280;
+    transition: width 0.2s ease;
+}
+header nav ul.menu > li > a:hover::after,
+.icons > a:hover::after,
+.icons .user-menu > a:hover::after {
+    width: 100%;
+}
+.header .icons .user-menu {
+    position: relative;
+}
+.header .icons .user {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    list-style: none;
+    min-width: 150px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 10;
+}
+.header .icons .user-menu:hover .user {
+    display: block;
+}
+.header .icons .user li {
+    margin: 0;
+}
+
+.header .icons .user a {
+    display: block;
+    padding: 10px 20px;
+    color: #aa9280;
+    font-weight: 200;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header .icons .user a:hover {
+    color: #ffffff;
 }
 #section_slider {
     height: calc(100vh - 80px);
@@ -253,7 +291,4 @@ header nav ul.menu > li > ul > li > a:hover {
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
-}
-.demo-height{
-    height: 100vh;
 }
